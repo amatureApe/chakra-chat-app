@@ -1,16 +1,17 @@
 import { VStack, Flex, Avatar, AvatarBadge, Heading, HStack, IconButton, Box, Divider, Text } from '@chakra-ui/react'
 import { RiDribbbleLine, RiInstagramLine, RiTwitterFill } from 'react-icons/ri'
+import UserAvatar from './UserAvatar'
 
 const onlineFriends = [
-  'Lazar Nikolov',
-  'Mark Chandler',
-  'Segun Adebayo',
-  'Tim Kolberger',
-  'Folasade Agbaje',
-  'Alex Gerrit',
-  'Jason Hughes',
-  'Jonathan Bakebwa',
-  'Tioluwani Kolawole',
+  'John Smith',
+  'Michael Pelps',
+  'Leroy Jenkins',
+  'James Freight',
+  'Emily Robbins',
+  'William Jones',
+  'Sarah Bush',
+  'Amy Kim',
+  'Demarcus Lemons',
 ];
 
 const ChatHistorySidebar = () => {
@@ -75,7 +76,7 @@ const ChatHistorySidebar = () => {
         spacing={3}
       >
         {onlineFriends.map((friend) => (
-          <Avatar name={friend} key={friend} />
+          <UserAvatar name={friend} key={friend} />
         ))}
       </HStack>
     </VStack>
