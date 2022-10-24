@@ -2,11 +2,13 @@ import { VStack, IconButton, Tooltip, Icon } from '@chakra-ui/react'
 import { MdDashboard, MdMail, MdSettings } from 'react-icons/md'
 import { HiLightningBolt, HiBell, HiTag, HiSearch } from 'react-icons/hi'
 
+import ChakraLogo from './CharkaLogo'
+
 const Navigation = () => {
   return (
     <VStack p={6} justifyContent="space-between" alignItems="center" w="full" >
       <VStack>
-        {/*Chakra Logo */}
+        <ChakraLogo mb={6} />
         <Tooltip label="Dashboard" placement="right">
           <IconButton color="gray.500" icon={<MdDashboard />} aria-label="Dashboard" />
         </Tooltip>
