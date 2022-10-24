@@ -1,6 +1,7 @@
-import { VStack, Flex, Avatar, AvatarBadge, Heading, HStack, IconButton, Box, Divider, Text } from '@chakra-ui/react'
+import { VStack, Flex, Avatar, AvatarBadge, Heading, HStack, IconButton, Box, Divider, Text, Input, List, ListItem } from '@chakra-ui/react'
 import { RiDribbbleLine, RiInstagramLine, RiTwitterFill } from 'react-icons/ri'
 import UserAvatar from './UserAvatar'
+import ChatRow from './ChatRow'
 
 const onlineFriends = [
   'John Smith',
@@ -28,7 +29,7 @@ const ChatHistorySidebar = () => {
         </Avatar>
         <VStack>
           <Heading size='md' mt={{ base: 0, lg: 3 }}>
-            Travis Taylor
+            John Doe
           </Heading>
           <HStack px={8} justifyContent='center' spacing={3} mt={6}>
             <IconButton
@@ -79,6 +80,38 @@ const ChatHistorySidebar = () => {
           <UserAvatar name={friend} key={friend} />
         ))}
       </HStack>
+      <Box px={8} w="full">
+        <Heading size="xs" w="full">Chats</Heading>
+        <Input variant="filled" mt={2} minH={10} rounded="full" placeholder="Search Chat" />
+      </Box>
+      <Box w="full" overflowY="auto">
+        <List w="full" spacing={0}>
+          <ListItem>
+            <ChatRow />
+          </ListItem>
+          <ListItem>
+            <ChatRow />
+          </ListItem>
+          <ListItem>
+            <ChatRow />
+          </ListItem>
+          <ListItem>
+            <ChatRow />
+          </ListItem>
+          <ListItem>
+            <ChatRow />
+          </ListItem>
+          <ListItem>
+            <ChatRow />
+          </ListItem>
+          <ListItem>
+            <ChatRow />
+          </ListItem>
+          <ListItem>
+            <ChatRow />
+          </ListItem>
+        </List>
+      </Box>
     </VStack>
   );
 };
