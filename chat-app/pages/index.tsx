@@ -1,15 +1,15 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { HStack, Flex } from '@chakra-ui/react'
+import Navigation from '../components/Navigation'
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
+  <HStack h="100vh" spacing={0}>
+    <Flex as="nav" h="full" maxW={16} w="full" bg="gray.100">
+      <Navigation />
+    </Flex>
+    <Flex as="aside" h="full" maxW="sm" w="full" borderRightColor="gray.100" borderRightWidth={1} />
+    <Flex as="main" h="full" flex={1} borderRightColor="gray.100" borderRightWidth={1} />
+    <Flex as="aside" h="full" maxW="sm" w="full" />
+  </HStack>
 )
 
 export default IndexPage
