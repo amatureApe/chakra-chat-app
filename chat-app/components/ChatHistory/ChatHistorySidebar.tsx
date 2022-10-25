@@ -24,7 +24,7 @@ const ChatHistorySidebar = () => {
         alignItems='center'
         justifyContent='flex-start'
       >
-        <Avatar name='Travis Taylor' size='2xl'>
+        <Avatar name='John Doe' size='2xl'>
           <AvatarBadge bg='green.400' boxSize={8} borderWidth={4} />
         </Avatar>
         <VStack>

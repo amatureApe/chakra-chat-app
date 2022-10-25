@@ -3,6 +3,7 @@ import { HStack, Flex } from '@chakra-ui/react'
 import Navigation from '../components/Navigation'
 import ChatHistorySidebar from '../components/ChatHistory/ChatHistorySidebar'
 import Chat from '../components/Chat'
+import ChatFiles from '../components/ChatFiles'
 
 const IndexPage = () => (
   <HStack h="100vh" spacing={0}>
@@ -15,7 +16,9 @@ const IndexPage = () => (
     <Flex as="main" h="full" flex={1} borderRightColor="gray.100" borderRightWidth={1}>
       <Chat />
     </Flex>
-    <Flex as="aside" h="full" maxW="sm" w="full" />
+    <Flex as="aside" h="full" maxW="sm" w="full">
+      <ChatFiles />
+    </Flex>
   </HStack>
 )
 
