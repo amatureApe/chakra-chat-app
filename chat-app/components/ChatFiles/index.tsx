@@ -1,6 +1,7 @@
-import { Flex, HStack, VStack, Text, IconButton, Avatar, AvatarBadge, Heading, Box, Divider, Button } from '@chakra-ui/react'
+import { Flex, HStack, VStack, Text, IconButton, Avatar, AvatarBadge, Heading, Box, Divider, Button, List, ListItem } from '@chakra-ui/react'
 import { FaBell } from 'react-icons/fa'
 import { RiDribbbleLine, RiInstagramLine, RiTwitterFill } from 'react-icons/ri'
+import ChatFile from './ChatFile'
 
 const ChatFiles = () => {
   return (
@@ -57,6 +58,41 @@ const ChatFiles = () => {
             see all
           </Button>
         </HStack>
+        <List spacing={4} mt={6} w="full">
+          <ListItem>
+            <ChatFile />
+          </ListItem>
+          <ListItem>
+            <ChatFile />
+          </ListItem>
+          <ListItem>
+            <ChatFile />
+          </ListItem>
+          <ListItem>
+            <ChatFile />
+          </ListItem>
+          <ListItem>
+            <ChatFile />
+          </ListItem>
+          <ListItem>
+            <ChatFile />
+          </ListItem>
+          <ListItem>
+            <ChatFile />
+          </ListItem>
+          <ListItem>
+            <ChatFile />
+          </ListItem>
+          <ListItem>
+            <ChatFile />
+          </ListItem>
+          <ListItem>
+            <ChatFile />
+          </ListItem>
+          <ListItem>
+            <ChatFile />
+          </ListItem>
+        </List>
       </VStack>
     </Flex>
   )
