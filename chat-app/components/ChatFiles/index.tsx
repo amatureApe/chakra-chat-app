@@ -2,6 +2,7 @@ import { Flex, HStack, VStack, Text, IconButton, Avatar, AvatarBadge, Heading, B
 import { FaBell } from 'react-icons/fa'
 import { RiDribbbleLine, RiInstagramLine, RiTwitterFill } from 'react-icons/ri'
 import ChatFile from './ChatFile'
+import ChatLink from './ChatLink'
 
 const ChatFiles = () => {
   return (
@@ -91,6 +92,20 @@ const ChatFiles = () => {
           </ListItem>
           <ListItem>
             <ChatFile />
+          </ListItem>
+        </List>
+        <Box px={8} w="full">
+          <Divider mt={6} color="gray.100" />
+        </Box>
+        <HStack px={8} w="full" mt={6} justifyContent="space-between">
+          <Heading size="md">Shared links</Heading>
+          <Button fontWeight="normal" variant="text" size="xs" color="blue">
+            see all
+          </Button>
+        </HStack>
+        <List pb={6} spacing={4} mt={6} w="full">
+          <ListItem>
+            <ChatLink />
           </ListItem>
         </List>
       </VStack>
