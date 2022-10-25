@@ -1,6 +1,7 @@
 import { Flex, HStack, Input, Stat, StatLabel, StatNumber, IconButton } from '@chakra-ui/react'
 import ChatBubble from './ChatBubble'
-import { IoMdSend } from 'react-icons/io'
+import { IoSend, IoDocuments } from 'react-icons/io5'
+import { HiChat } from 'react-icons/hi'
 
 const messages = [
   {
@@ -55,11 +56,28 @@ const messages = [
   }
 ];
 
-const Chat = () => {
+type Props = {
+  onChatHistoryOpen: () => void
+  onChatFilesOpen: () => void
+}
+
+const Chat = ({ onChatHistoryOpen, onChatFilesOpen }: Props) => {
   return (
     <Flex w="full" flexDirection="column">
       <HStack px={4} py={4} borderBottomColor="gray.100" borderBottomWidth={1}>
+        <IconButton
+          onClick={onChatHistoryOpen}
+          display={{ base: "inherit", lg: "none" }}
+          icon={<HiChat />}
+          aria-label="Toggle Chat History Drawer"
+        />
         <Input variant="filled" rounded="full" placeholder="Search" />
+        <IconButton
+          onClick={onChatFilesOpen}
+          display={{ base: "inherit", lg: "none" }}
+          icon={<IoDocuments />}
+          aria-label="Toggle Chat Files Drawer"
+        />
       </HStack>
       <Flex px={6} overflowY="auto" flexDirection="column" flex={1}>
         <Stat mt={6}>
@@ -83,7 +101,7 @@ const Chat = () => {
           mx={1}
           colorScheme="blue"
           aria-label="Send message"
-          icon={<IoMdSend />}
+          icon={<IoSend />}
         />
       </Flex>
     </Flex>
