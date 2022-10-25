@@ -1,9 +1,10 @@
-import { Flex, HStack, Input, Stat, StatLabel, StatNumber } from '@chakra-ui/react'
+import { Flex, HStack, Input, Stat, StatLabel, StatNumber, IconButton } from '@chakra-ui/react'
 import ChatBubble from './ChatBubble'
+import { IoMdSend } from 'react-icons/io'
 
 const messages = [
   {
-    message: "Hey Travis! Would you like to go out for a coffee?",
+    message: "Hey John! Would you like to go out for a coffee?",
     from: "others",
     dateSent: "20:21"
   },
@@ -73,6 +74,17 @@ const Chat = () => {
             dateSent={dateSent}
           />
         ))}
+      </Flex>
+      <Flex
+        pl={4} pr={2} py={2} borderTopColor="gray.100" borderTopWidth={1}
+      >
+        <Input variant="filled" placeholder="Type your message" />
+        <IconButton
+          mx={1}
+          colorScheme="blue"
+          aria-label="Send message"
+          icon={<IoMdSend />}
+        />
       </Flex>
     </Flex>
   )
